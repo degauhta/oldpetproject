@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.Toolbar
+import androidx.appcompat.app.AppCompatDelegate
 import kotlinx.android.synthetic.main.activity_root.toolbar
+import kotlinx.android.synthetic.main.layout_submenu.switch_mode
 import old.pet.project.R
 import old.pet.project.extensions.dpToIntPx
 
@@ -13,6 +15,11 @@ class RootActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_root)
         setupToolbar()
+
+        switch_mode.setOnClickListener {
+            delegate.localNightMode =
+                if (switch_mode.isChecked) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
+        }
     }
 
     private fun setupToolbar() {
