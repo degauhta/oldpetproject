@@ -42,7 +42,9 @@
 
     <old.pet.project.ui.custom.Bottombar
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_height="wrap_content"/>
+        android:elevation="4dp"
+        android:theme="@style/ArticleBarsTheme" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
